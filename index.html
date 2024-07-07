@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="cart-sidebar">
+  <h2>Cart<i class="fas fa-shopping-cart"></i></h2>
+  <ul id="cart-list"></ul>
+  <div class="subtotal-container"></div>
+</div>
+<button class="cart-btn" id="cart-btn">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="cart-counter">0</span>
+</button>
+
+   <p class="title" style="text-align: center;">PRODUCT LIST</p>
+
+   <div class = "card-wrapper">
+    <div class = "card">
+      <!-- card left -->
+      <div class = "product-imgs">
+        <div> <p class="pd">Product:</p></div>
+        <div class = "img-display">
+          <div class = "img-showcase">
+            <img src = "1.jpeg" alt = "1 image">
+            <img src = "2.jpeg" alt = "2 image">
+            <img src = "3.jpge" alt = "3 image">
+            <img src = "4.jpg"e alt = "4 image">
+          </div>
+        </div>
+        <div class = "img-select">
+          <div class = "img-item">
+            <a href = "#" data-id = "9">
+              <img src = "1.jpeg" alt = "1 image">
+            </a>
+          </div>
+          <div class = "img-item">
+            <a href = "#" data-id = "10">
+              <img src = "2.jpeg" alt = "2 image">
+            </a>
+          </div>
+          <div class = "img-item">
+            <a href = "#" data-id = "11">
+              <img src = "3.jpeg" alt = "3 image">
+            </a>
+          </div>
+          <div class = "img-item">
+            <a href = "#" data-id = "12">
+              <img src = "4.jpeg" alt = "4 image">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- card right -->
+      <div class = "product-content">
+        <h2 class = "product-title">Chairs</h2>
+
+        <div class = "product-price">
+          <p class = "price"> Price: <span>$275.00</span></p>
+        </div>
+
+        <div class = "product-detail">
+          <h3>About this item: </h3>
+          <p>Our plastic chairs are durable, lightweight, and easy to clean. Made from high-quality plastic materials. With a sleek and modern design, they are ideal for home, office, or outdoor events. Available in a range of colors.</p>
+          <ul>
+            <li>  Color:<select id="color">
+              <option value="Red">Red</option>
+              <option value="Green">Green</option>
+              <option value="Black">Black</option>
+              <option value="Blue">Blue</option>
+          </select></li>
+          <li>  Size:
+            <select id="size" onchange="updatePrice()">
+                <option value="Small"> Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select></li>
+            <li>Available: <span>in stock</span></li>
+            <li>Category: <span>Shoes</span></li>
+            <li>Shipping Area: <span>All over the world</span></li>
+            <li>Shipping Fee: <span>Free</span></li>
+          </ul>
+        </div>
+
+        <div class = "purchase-info">
+         <button type="button" class="btn" id="addToCartBtn" onclick="addToCart(this)">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    
+
+   
+    <div class = "card-wrapper">
+      <div class = "card">
+        <!-- card left -->
+        <div class = "product-imgs">
+          <div> <p class="pd">Product:</p></div>
+          <div class = "img-display">
+            <div class = "img-showcase">
+              <img src = "t1.png" alt = " image">
+              <img src = "t2.png" alt = " image">
+              <img src = "t3.png" alt = "image">
+              <img src = "t4.png" alt = " image">
+            </div>
+          </div>
+          <div class = "img-select">
+            <div class = "img-item">
+              <a href = "#" data-id = "5">
+                <img src = "t1.png" alt = " image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "6">
+                <img src = "t2.png" alt = "image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "7">
+                <img src = "t3.png" alt = "image" >
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "8">
+                <img src = "t4.png" alt = " image">
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- card right -->
+        <div class = "product-content">
+          <h2 class = "product-title">T-Shirts</h2>
+
+          <div class = "product-price">
+            <p class = "price"> Price: <span>$150.00</span></p>
+          </div>
+
+          <div class = "product-detail">
+            <h3>About this item: </h3>
+            <p>Stay comfortable and stylish with our cotton T-shirt. Made from soft and breathable cotton, this classic tee features a relaxed fit and crew neck design. Perfect for everyday wear.
+            </p>
+            <ul>
+              <li>  Color:<select id="color">
+                <option value="Blue">Blue</option>
+                <option value="Red">Red</option>
+                <option value="Black">Black</option>
+                <option value="Grey">Grey</option>
+            </select></li>
+            <li>  Size:
+              <select id="size" onchange="updatePrice()">
+                  <option value="Small"> Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+              </select></li>
+              <li>Available: <span>in stock</span></li>
+              <li>Category: <span>Shoes</span></li>
+              <li>Shipping Area: <span>All over the world</span></li>
+              <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+          </div>
+
+          <div class = "purchase-info">
+           <button type="button" class="btn" id="addToCartBtn" onclick="addToCart(this)">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    
+
+
+<div class = "card-wrapper">
+  <div class = "card" >
+    <!-- card left -->
+    <div class = "product-imgs">
+      <div> <p class="pd">Product:</p></div>
+      <div class = "img-display">
+        <div class = "img-showcase">
+          <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
+          <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+          <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
+          <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
+        </div>
+      </div>
+      <div class = "img-select">
+        <div class = "img-item">
+          <a href = "#" data-id = "1">
+            <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
+          </a>
+        </div>
+        <div class = "img-item">
+          <a href = "#" data-id = "2">
+            <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+          </a>
+        </div>
+        <div class = "img-item">
+          <a href = "#" data-id = "3">
+            <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
+          </a>
+        </div>
+        <div class = "img-item">
+          <a href = "#" data-id = "4">
+            <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- card right -->
+    <div class = "product-content">
+      <h2 class = "product-title">nike shoes</h2>
+
+      <div class = "product-price">
+        <p class = "price"> Price: <span>$320.00</span></p>
+      </div>
+
+      <div class = "product-detail">
+        <h3>About this item: </h3>
+        <p>Step into style with our sleek and comfortable Nike Shoes. These shoes are perfect for daily wear. With a sturdy outsole and easy lace-up closure, you'll be ready to take on the day in comfort and style</p>
+        <ul>
+          <li>  Color:<select id="color">
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Mustard">Mustard</option>
+            <option value="Grey">Grey</option>
+        </select></li>
+        <li>  Size:
+          <select id="size" onchange="updatePrice()">
+              <option value="Small"> Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+          </select></li>
+          <li>Available: <span>in stock</span></li>
+          <li>Category: <span>Shoes</span></li>
+          <li>Shipping Area: <span>All over the world</span></li>
+          <li>Shipping Fee: <span>Free</span></li>
+        </ul>
+      </div>
+
+      <div class = "purchase-info">
+      <button type="button" class="btn" id="addToCartBtn" onclick="addToCart(this)">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+   
+   
+    
+    <script src="script.js"></script>
+  </body>
+</html>
