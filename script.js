@@ -34,13 +34,13 @@ productCards.forEach((productCard) => {
         case '6': 
         case '7': 
         case '8': 
-        imgSrc = `t${imgId - 4}.png`; 
+        imgSrc = `T-shirts/t${imgId - 4}.png`; 
         break; 
         case '9': 
         case '10': 
         case '11': 
         case '12': 
-        imgSrc = `${imgId - 8}.jpeg`;
+        imgSrc = `Chairs/${imgId - 8}.jpeg`;
         
         break;
       default:
